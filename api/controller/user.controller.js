@@ -7,11 +7,17 @@ export const deleteUser = async (req, res, next) => {
 
   //very important to understand
   if (req.userId !== user._id.toString()) {
-    return next(createError(403, "You can delete only your account")) 
+    return next(createError(403, "You can delete only your account"));
   }
 
   await User.findByIdAndDelete(req.params.id);
   res.status(200).send("Deleted");
 
   //await User.findByIdAndDelete(req.params.id);
+};
+
+export const getUser = async (req, res, next) => {
+  const user = await User.findById(req.params.id);
+
+  res.status(200).send(user);
 };

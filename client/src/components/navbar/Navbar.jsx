@@ -35,9 +35,9 @@ const Navbar = () => {
     <header className={active ? "header active" : "header"}>
       <nav className="container ">
         <div className="logo">
-          <div to="/" className="link">
+          <Link to="/" className="link">
             <span className="text">Gigsters</span>
-          </div>
+          </Link>
           <span className="dot">.</span>
         </div>
 
