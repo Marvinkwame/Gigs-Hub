@@ -1,0 +1,96 @@
+.hero {
+  background-color: #191443;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  .container {
+    width: 1200px;
+    display: flex;
+    align-items: center;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .search {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 5px;
+        overflow: hidden;
+
+        .searchInput {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          input {
+            border: 0;
+            outline: 0;
+            width: 100%;
+
+            &::placeholder {
+              color: gray;
+            }
+          }
+        }
+
+        button {
+          width: 120px;
+          height: 50px;
+          border: none;
+          background-color: #1dbf73;
+          color: white;
+          align-self: flex-end;
+          cursor: pointer;
+        }
+      }
+
+      .services {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        span {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        button {
+          width: max-content;
+          color: white;
+          border: 1px solid white;
+          padding: 5px 10px;
+          border-radius: 20px;
+          background-color: transparent;
+          font-size: 14px;
+          cursor: pointer;
+          transition: 0.5s;
+
+          &:hover {
+            background-color: white;
+            color: black;
+          }
+        }
+      }
+    }
+
+    .right {
+        position: relative;
+
+        .freelancer {
+            position: absolute;
+            bottom: 2rem;
+            right: 1rem;
+            font-size: 1rem;
+            font-weight: 500;
+            color: black;
+        }
+    }
+  }
+}

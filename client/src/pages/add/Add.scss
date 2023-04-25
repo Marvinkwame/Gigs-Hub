@@ -1,0 +1,43 @@
+.add {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 1200px;
+
+    h1 {
+      font-weight: 500;
+    }
+
+    .sections {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+
+      .info,
+      .details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+        gap: 1rem;
+
+        input,
+        select,
+        textarea {
+          padding: 20px;
+        }
+
+        button {
+          border: none;
+          padding: 20px;
+          color: white;
+          font-weight: 500;
+          font-size: 18px;
+          background-color: #1dbf73;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
