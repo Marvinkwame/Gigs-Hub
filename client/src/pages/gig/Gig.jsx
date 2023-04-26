@@ -12,6 +12,7 @@ import { TiImage, TiTick } from "react-icons/ti";
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import newRequest from "../../utils/newRequest";
+import Reviews from "../../components/reviews/Reviews";
 
 const Gig = () => {
   const { id } = useParams();
@@ -25,7 +26,7 @@ const Gig = () => {
       }),
   });
 
-  const userId = data?.userId;
+  const userId = data?.userId; //getting the user inforamtion by using the id 
 
   const {
     isLoading: isLoadingUser,
@@ -38,7 +39,7 @@ const Gig = () => {
         console.log(dataUser);
         return res.data;
       }),
-    enabled: !!userId,
+    enabled: !!userId, //only use this when userId exists
   });
   return (
     <div className="gig">
@@ -144,6 +145,7 @@ const Gig = () => {
                 </div>
               </div>
             )}
+            <Reviews gigId={id} />
           </div>
 
           <div className="right">
