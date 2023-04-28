@@ -69,7 +69,6 @@ const Navbar = () => {
                       <Link to="/mygigs">Gigs</Link>
                       <Link to="/add">Add Gigs</Link>
                       <Link to="/earnings">Earnings</Link>
-                      <Link to="/messages">Messages</Link>
                       <Link to="/orders">Orders</Link>
                     </>
                   )}
@@ -77,6 +76,7 @@ const Navbar = () => {
                   <Link to="/dashboard">Dashboard</Link>
                   <Link to="/request">Post a Request</Link>
                   <Link to="/">Refer a Friend</Link>
+                  <Link to="/messages">Messages</Link>
                   <Link onClick={handleLogout}>Logout</Link>
                 </div>
               )}
