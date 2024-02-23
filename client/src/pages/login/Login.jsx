@@ -14,7 +14,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await newRequest.post("auth/login", { username, password });
+      const res = await newRequest.post("auth/login", { username, password }); //passing the username and password
       localStorage.setItem("currentUser", JSON.stringify(res.data)) //can set only string to localStorage
       console.log(res.data);
       navigate("/");

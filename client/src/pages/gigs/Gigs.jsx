@@ -47,7 +47,7 @@ const Gigs = () => {
     <div className="gigs">
       <div className="container">
         <h2 className="gigs-title">
-          <AiOutlineHome /> / AI Artistis
+          <AiOutlineHome /> / {search}
         </h2>
         <h3 className="gig-title">Gigsters: Graphics and Design</h3>
         <p className="gig-note">
@@ -62,6 +62,7 @@ const Gigs = () => {
           </div>
           <div className="right-side">
             <h4>Sort By:</h4>
+
             <p className="sort-name">
               {sort === "sales" ? "Best Sellling" : "Newest"}
             </p>

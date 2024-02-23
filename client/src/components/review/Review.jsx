@@ -6,7 +6,7 @@ import {
 import "./Review.scss";
 import { useQuery } from "@tanstack/react-query";
 import newRequest from "../../utils/newRequest";
-import "./Review.scss"
+import "./Review.scss";
 
 const Review = ({ review }) => {
   const { isLoading, error, data } = useQuery({
@@ -25,7 +25,15 @@ const Review = ({ review }) => {
         "Something went wrong"
       ) : (
         <div className="user">
-          <img className="pp" src={data.img} alt="" />
+          <img
+            className="pp"
+            src={
+              data.img ||
+              "https://img.freepik.com/free-icon/user_318-563642.jpg?w=2000"
+            }
+            alt=""
+          />
+
           <div className="info">
             <span>{data.username}</span>
             <div className="country">

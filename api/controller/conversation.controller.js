@@ -48,6 +48,7 @@ export const getSingleConversation = async (req, res, next) => {
   }
 };
 
+
 export const getConversations = async (req, res, next) => {
   try {
     const conversations = await Conversation.find(

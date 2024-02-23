@@ -14,7 +14,7 @@ export const createReview = async (req, res, next) => {
   });
 
   try {
-    const review = await Review.findOne({
+    const review = await Review.findOne({ //if a review for this gig has been created, dont create another one
       gigId: req.body.gigId,
       userId: req.userId,
     });

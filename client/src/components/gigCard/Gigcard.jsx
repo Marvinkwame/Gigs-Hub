@@ -10,6 +10,7 @@ const Gigcard = ({ gig }) => {
     queryKey: [gig.userId],
     queryFn: () =>
       newRequest.get(`/users/${gig.userId}`).then((res) => {
+        console.log(res.data)
         return res.data;
       }),
   });
